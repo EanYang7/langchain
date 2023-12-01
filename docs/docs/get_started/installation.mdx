@@ -1,8 +1,10 @@
-# Installation
 
-## Official release
 
-To install LangChain run:
+# 安装
+
+## 官方发布
+
+要安装LangChain，请运行：
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -17,47 +19,41 @@ import CodeBlock from "@theme/CodeBlock";
   </TabItem>
 </Tabs>
 
-This will install the bare minimum requirements of LangChain.
-A lot of the value of LangChain comes when integrating it with various model providers, datastores, etc.
-By default, the dependencies needed to do that are NOT installed. You will need to install the dependencies for specific integrations separately.
+这将安装LangChain的最低要求。LangChain的许多价值在于与各种模型提供者、数据存储等进行集成。默认情况下，不会安装用于这些集成所需的依赖项。您需要单独安装特定集成所需的依赖项。
 
-## From source
+## 从源代码安装
 
-If you want to install from source, you can do so by cloning the repo and be sure that the directory is `PATH/TO/REPO/langchain/libs/langchain` running:
+如果您想从源代码安装，可以通过克隆仓库，并确保目录为 `PATH/TO/REPO/langchain/libs/langchain` 运行：
 
 ```bash
 pip install -e .
 ```
 
-## LangChain experimental
-The `langchain-experimental` package holds experimental LangChain code, intended for research and experimental uses.
-Install with:
+## LangChain实验
+
+`langchain-experimental`包含实验性的LangChain代码，用于研究和实验目的。安装方式如下：
 
 ```bash
 pip install langchain-experimental
 ```
 
 ## LangServe
-LangServe helps developers deploy LangChain runnables and chains as a REST API.
-LangServe is automatically installed by LangChain CLI.
-If not using LangChain CLI, install with:
+LangServe帮助开发者将LangChain可运行文件和链部署为REST API。LangServe由LangChain CLI自动安装。如果不使用LangChain CLI，请使用以下方式进行安装：
 
 ```bash
 pip install "langserve[all]"
 ```
-for both client and server dependencies. Or `pip install "langserve[client]"` for client code, and `pip install "langserve[server]"` for server code.
+对于客户端和服务器的依赖，请使用 `pip install "langserve[client]"` 安装客户端代码，并使用 `pip install "langserve[server]"` 安装服务器代码。
 
 ## LangChain CLI
-The LangChain CLI is useful for working with LangChain templates and other LangServe projects.
-Install with:
+LangChain CLI 对于使用 LangChain 模板和其他 LangServe 项目非常有用。安装请使用：
 
 ```bash
 pip install langchain-cli
 ```
 
 ## LangSmith SDK
-The LangSmith SDK is automatically installed by LangChain.
-If not using LangChain, install with:
+LangSmith SDK是由LangChain自动安装的。如果不使用LangChain，请使用以下方式安装：
 
 ```bash
 pip install langsmith
