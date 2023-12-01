@@ -1,106 +1,85 @@
 # 🦜️🔗 LangChain
 
-⚡ Building applications with LLMs through composability ⚡
+⚡ 通过组合composability构建LLMs的应用程序⚡
 
-[![Release Notes](https://img.shields.io/github/release/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/releases)
-[![CI](https://github.com/langchain-ai/langchain/actions/workflows/langchain_ci.yml/badge.svg)](https://github.com/langchain-ai/langchain/actions/workflows/langchain_ci.yml)
-[![Experimental CI](https://github.com/langchain-ai/langchain/actions/workflows/langchain_experimental_ci.yml/badge.svg)](https://github.com/langchain-ai/langchain/actions/workflows/langchain_experimental_ci.yml)
-[![Downloads](https://static.pepy.tech/badge/langchain/month)](https://pepy.tech/project/langchain)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/langchainai.svg?style=social&label=Follow%20%40LangChainAI)](https://twitter.com/langchainai)
-[![](https://dcbadge.vercel.app/api/server/6adMQxSpJS?compact=true&style=flat)](https://discord.gg/6adMQxSpJS)
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/langchain-ai/langchain)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/langchain-ai/langchain)
-[![GitHub star chart](https://img.shields.io/github/stars/langchain-ai/langchain?style=social)](https://star-history.com/#langchain-ai/langchain)
-[![Dependency Status](https://img.shields.io/librariesio/github/langchain-ai/langchain)](https://libraries.io/github/langchain-ai/langchain)
-[![Open Issues](https://img.shields.io/github/issues-raw/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/issues)
+寻找JS/TS库？查看 [LangChain.js](https://github.com/langchain-ai/langchainjs).
 
-Looking for the JS/TS library? Check out [LangChain.js](https://github.com/langchain-ai/langchainjs).
+## 快速安装
 
-To help you ship LangChain apps to production faster, check out [LangSmith](https://smith.langchain.com). 
-[LangSmith](https://smith.langchain.com) is a unified developer platform for building, testing, and monitoring LLM applications. 
-Fill out [this form](https://airtable.com/appwQzlErAS2qiP0L/shrGtGaVBVAz7NcV2) to get off the waitlist or speak with our sales team.
-
-## Quick Install
-
-With pip:
+使用pip:
 ```bash
 pip install langchain
 ```
 
-With conda:
+使用conda:
 ```bash
 conda install langchain -c conda-forge
 ```
 
-## 🤔 What is LangChain?
+## 🤔什么是LangChain?
 
-**LangChain** is a framework for developing applications powered by language models. It enables applications that:
-- **Are context-aware**: connect a language model to sources of context (prompt instructions, few shot examples, content to ground its response in, etc.)
-- **Reason**: rely on a language model to reason (about how to answer based on provided context, what actions to take, etc.)
+**LangChain** 是一个用语言模型驱动的应用程序开发框架。它使得可以开发以下类型的应用程序：
 
-This framework consists of several parts.
-- **LangChain Libraries**: The Python and JavaScript libraries. Contains interfaces and integrations for a myriad of components, a basic run time for combining these components into chains and agents, and off-the-shelf implementations of chains and agents.
-- **[LangChain Templates](templates)**: A collection of easily deployable reference architectures for a wide variety of tasks.
-- **[LangServe](https://github.com/langchain-ai/langserve)**: A library for deploying LangChain chains as a REST API.
-- **[LangSmith](https://smith.langchain.com)**: A developer platform that lets you debug, test, evaluate, and monitor chains built on any LLM framework and seamlessly integrates with LangChain.
++ **具备上下文感知性**：将语言模型连接到上下文来源（提示说明、少量示例、用于支撑其回应的内容等）。
++ **推理**：依赖于语言模型进行推理（根据提供的上下文如何回答，采取什么行动等）。
 
-**This repo contains the `langchain` ([here](libs/langchain)), `langchain-experimental` ([here](libs/experimental)), and `langchain-cli` ([here](libs/cli)) Python packages, as well as [LangChain Templates](templates).**
+这个框架包含几个部分。
+
+- **LangChain库**：Python和JavaScript库。包含各种组件的接口和集成，用于将这些组件组合成链和代理的基本运行时，以及链和代理的现成实现。
+- **[LangChain模板](https://github.com/EanYang7/langchain/tree/master/templates)**：一系列易于部署的各种任务的参考架构。
+- **[LangServe](https://github.com/langchain-ai/langserve)**：一个用于将LangChain链部署为REST API的库。
+- **[LangSmith](https://smith.langchain.com/)**：一个开发者平台，可让您调试、测试、评估和监视任何LLM框架构建的链，并与LangChain无缝集成。
+
+**此存储库包含** `langchain` ([here](libs/langchain)), `langchain-experimental` ([here](libs/experimental)), and `langchain-cli` ([here](libs/cli)) Python **包，以及** [LangChain 模板](templates).
 
 ![LangChain Stack](docs/static/img/langchain_stack.png)
 
-## 🧱 What can you build with LangChain?
-**❓ Retrieval augmented generation**
+## 🧱你可以使用LangChain构建什么？
+❓ **检索增强生成 Retrieval augmented generation**
 
-- [Documentation](https://python.langchain.com/docs/use_cases/question_answering/)
-- End-to-end Example: [Chat LangChain](https://chat.langchain.com) and [repo](https://github.com/langchain-ai/chat-langchain)
+- [文档](https://python.langchain.com/docs/use_cases/question_answering/)
+- 端到端示例 : [Chat LangChain](https://chat.langchain.com) 和[repo](https://github.com/langchain-ai/chat-langchain)
 
-**💬 Analyzing structured data**
+💬 **分析结构化数据**
 
-- [Documentation](https://python.langchain.com/docs/use_cases/qa_structured/sql)
-- End-to-end Example: [SQL Llama2 Template](https://github.com/langchain-ai/langchain/tree/master/templates/sql-llama2)
+- [文档](https://python.langchain.com/docs/use_cases/qa_structured/sql)
+- 端到端示例 : [SQL Llama2 模板](https://github.com/langchain-ai/langchain/tree/master/templates/sql-llama2)
 
-**🤖 Chatbots**
+🤖 **聊天机器人**
 
-- [Documentation](https://python.langchain.com/docs/use_cases/chatbots)
-- End-to-end Example: [Web LangChain (web researcher chatbot)](https://weblangchain.vercel.app) and [repo](https://github.com/langchain-ai/weblangchain)
+- [文档](https://python.langchain.com/docs/use_cases/chatbots)
+- 端到端示例 : [Web LangChain (web researcher chatbot)](https://weblangchain.vercel.app) 和 [repo](https://github.com/langchain-ai/weblangchain)
 
-And much more! Head to the [Use cases](https://python.langchain.com/docs/use_cases/) section of the docs for more.
+还有更多！前往[用例](https://python.langchain.com/docs/use_cases/)部分了解更多信息。
 
-## 🚀 How does LangChain help?
-The main value props of the LangChain libraries are:
-1. **Components**: composable tools and integrations for working with language models. Components are modular and easy-to-use, whether you are using the rest of the LangChain framework or not
-2. **Off-the-shelf chains**: built-in assemblages of components for accomplishing higher-level tasks
+## 🚀 LangChain如何帮助？
+LangChain库的主要价值主张包括：
 
-Off-the-shelf chains make it easy to get started. Components make it easy to customize existing chains and build new ones. 
+1. **组件**：用于处理语言模型的可组合工具和集成。组件是模块化且易于使用的，无论您是否使用LangChain框架的其他部分。
+2. **现成的链**：用于完成高级任务的内置组件组合
 
-Components fall into the following **modules**:
+现成的链使您可以轻松入门。组件使您可以轻松自定义现有链并构建新链。
 
-**📃 Model I/O:**
+组件分为以下**模块**：
 
-This includes prompt management, prompt optimization, a generic interface for all LLMs, and common utilities for working with LLMs.
+📃  **模型输入/输出：**
 
-**📚 Retrieval:**
+这包括提示管理、提示优化、通用的LLM接口以及用于处理LLM的常用实用工具。
 
-Data Augmented Generation involves specific types of chains that first interact with an external data source to fetch data for use in the generation step. Examples include summarization of long pieces of text and question/answering over specific data sources.
+**📚 检索：**
 
-**🤖 Agents:**
+数据增强生成涉及特定类型的链，这些链首先与外部数据源交互，以获取用于生成步骤的数据。示例包括长文本摘要和特定数据源的问答。
 
-Agents involve an LLM making decisions about which Actions to take, taking that Action, seeing an Observation, and repeating that until done. LangChain provides a standard interface for agents, a selection of agents to choose from, and examples of end-to-end agents.
+**🤖 代理：**
 
-## 📖 Documentation
+代理涉及LLM决定采取哪些行动、采取该行动、看到一个观察结果，并重复该过程直到完成。LangChain提供了代理的标准接口、可供选择的代理以及端到端代理的示例。
 
-Please see [here](https://python.langchain.com) for full documentation, which includes:
+## 📖 文档
 
-- [Getting started](https://python.langchain.com/docs/get_started/introduction): installation, setting up the environment, simple examples
-- Overview of the [interfaces](https://python.langchain.com/docs/expression_language/), [modules](https://python.langchain.com/docs/modules/) and [integrations](https://python.langchain.com/docs/integrations/providers)
-- [Use case](https://python.langchain.com/docs/use_cases/qa_structured/sql) walkthroughs and best practice [guides](https://python.langchain.com/docs/guides/adapters/openai)
-- [LangSmith](https://python.langchain.com/docs/langsmith/), [LangServe](https://python.langchain.com/docs/langserve), and [LangChain Template](https://python.langchain.com/docs/templates/) overviews
-- [Reference](https://api.python.langchain.com): full API docs
+请参阅[这里](https://python.langchain.com/)以获取完整的文档，其中包括：
 
-
-## 💁 Contributing
-
-As an open-source project in a rapidly developing field, we are extremely open to contributions, whether it be in the form of a new feature, improved infrastructure, or better documentation.
-
-For detailed information on how to contribute, see [here](.github/CONTRIBUTING.md).
+- [入门](https://python.langchain.com/docs/get_started/introduction)：安装、设置环境、简单示例
+- [界面](https://python.langchain.com/docs/expression_language/)、[模块](https://python.langchain.com/docs/modules/)和[集成](https://python.langchain.com/docs/integrations/providers)的概述
+- 用例演示和最佳实践[指南](https://python.langchain.com/docs/use_cases/qa_structured/sql)
+- [LangSmith](https://python.langchain.com/docs/langsmith/)、[LangServe](https://python.langchain.com/docs/langserve)和[LangChain模板](https://python.langchain.com/docs/templates/)的概述
+- [参考](https://api.python.langchain.com/)：完整的API文档
